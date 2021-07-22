@@ -1,0 +1,1 @@
+/local/mnt/workspace/seelapur/rs_learn/Learning_Rust/Rust_Basics/functions/target/debug/functions: /local/mnt/workspace/seelapur/rs_learn/Learning_Rust/Rust_Basics/functions/src/lib.rs /local/mnt/workspace/seelapur/rs_learn/Learning_Rust/Rust_Basics/functions/src/main.rs
