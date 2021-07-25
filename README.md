@@ -127,7 +127,7 @@ Arrays are of max size 32
 
 Use vec for having larger and Arrays are on stack by default
 
-In conditionals expression always will be boolean
+In conditionals expression always will be boolean, need not have paranthesis
 
 msg =  if cnd1 {
 	"cnd1"
@@ -135,4 +135,37 @@ msg =  if cnd1 {
 	"cnd2"
 };
 
-if is an expression in rust so we can use as value to a variable
+"if" is an expression in rust so we can use as value to a variable
+can have tail expressions
+
+for num in [1,2 ,3].iter() {
+println!("{}", num);
+}
+
+"loop" is unconditional loop, represents infinite loop
+
+'outer: loop {
+	if cnd {
+		break 'outer;
+	}
+}
+
+ranges 0..50
+ranges 0..=50
+
+string slice str } borrowed string value cannot be modified
+String } value can be modified
+
+by default assignment of string is borrowed string
+
+let msg = "123".to_string();
+
+let msg = String::from("123");
+
+
+String have capacity apart from len
+
+word.bytes();
+
+word.chars(); // returns iterators
+.nth(3) // for indexing into string, iterators facilitate this
