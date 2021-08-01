@@ -169,3 +169,34 @@ word.bytes();
 
 word.chars(); // returns iterators
 .nth(3) // for indexing into string, iterators facilitate this
+
+Ownership:
+
+Each value has an owner
+only one owner
+owner goes out of scope value gets dropped
+
+let s1 = String::from("abc");
+let s2=s1;
+
+println!("{}", s1); // error, as s1 is moved to s2
+
+
+let s2 = s1.clone();
+println!("{}",s1);
+
+let s1 = String::from("abc");
+do_some(s1); // error if we print s1
+do_some(&s1);
+do_some(&mut s1); // to replace s1
+println!("{}",s1); // no error, as valued is not moved
+
+fn do_some(s: &String) {
+//fn do_some(s: &mut String) {
+// to dereference (*s)
+}
+
+Lifetimes: Rust makes sures references are always valid
+Either one mutable reference, any number of immutable references
+
+tail expression in rust must be last statement executed in that function
